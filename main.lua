@@ -1,5 +1,4 @@
 local mcd = require("mcdir.mcdir")
-local cube = love.graphics.newImage("lesha.png")
 
 function love.load()
     love.window.setMode(800, 600)
@@ -11,5 +10,5 @@ function love.update(dt)
 end
 
 function love.draw()
-    mcd.DrawMapWithSprites(mcd.map, cube)
+    mcd.
 end
