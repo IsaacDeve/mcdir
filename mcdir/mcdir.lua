@@ -28,7 +28,8 @@ function mcdir.DrawMapWithSprites(maptodraw, sprite)
     for y = 1, #maptodraw do
         for x = 1, #maptodraw[y] do
             if maptodraw[y][x] == 1 then
-                love.graphics.draw(sprite, (x - 1) * mcdir.tileSize, (y - 1) * mcdir.tileSize, mcdir.tileSize, mcdir.tileSize)
+                love.graphics.setColor(1, 1, 1)
+                love.graphics.draw(sprite, (x - 1) * mcdir.tileSize, (y - 1) * mcdir.tileSize, 0, mcdir.tileSize / sprite:getWidth(), mcdir.tileSize / sprite:getHeight())
             end
         end
     end
