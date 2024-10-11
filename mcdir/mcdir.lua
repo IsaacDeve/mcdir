@@ -24,4 +24,14 @@ function mcdir.DrawMap(maptodraw, colorR, colorG, colorB)
     end
 end
 
+function mcdir.DrawMapWithSprites(maptodraw, sprite)
+    for y = 1, #maptodraw do
+        for x = 1, #maptodraw[y] do
+            if maptodraw[y][x] == 1 then
+                love.graphics.draw(sprite, (x - 1) * mcdir.tileSize, (y - 1) * mcdir.tileSize, mcdir.tileSize, mcdir.tileSize)
+            end
+        end
+    end
+end
+
 return mcdir
